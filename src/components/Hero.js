@@ -1,5 +1,5 @@
 
-function Hero() {
+function Hero(props) {
     return (
         <div className="row">
             <div className="right-img col-xs-12 col-md-4 d-none  d-xl-block">
@@ -7,17 +7,17 @@ function Hero() {
                     <div style={{color:"white", lineHeight:"220%"}}>
                         <div className="strong" style={{padding:"35px"}}>
                             <p style={{border: "2px solid white", textAlign: "center", width:"135px", padding:"5px", fontSize: "22px"}}><b>TOP NEWS</b></p></div>
-                        <p style={{textAlign:"left", padding:"5px", fontSize:"30px", marginLeft:"30px", marginBottom:"100px"}}><b>F.W. Webb<br />Unveils New Mural<br />at Bronx Location</b></p>
-                        <a href="/news/2022/bronx-mural.php" className="strong a-color" style={{ fontSize: "15px", color: "white !important", marginLeft: "35px" }}>Read More...</a>
+                        <p style={{textAlign:"left", padding:"5px", fontSize:"30px", marginLeft:"30px", marginBottom:"100px"}} {...props.settings?.$?.headline}><b>{props.settings?.headline}</b></p>
+                        <a href={props.settings?.url.href} className="strong a-color" style={{ fontSize: "15px", color: "white !important", marginLeft: "35px" }}>Read More...</a>
                     </div>
                 </div>
             </div>
 
-            <div className="left-img col-xs-12 col-md-8 d-none  d-xl-block" style={{padding: "0", margin: "0 auto", backgroundColor: "#FFF",  borderRight: "solid 4px #FFF"}}><img src="https://fwwebb.com/images/fwwebb/news/2022/News-870x446.jpg" className="img-fluid" alt="Bronx Mural" style={{marginTop:"25px"}} />
+            <div className="left-img col-xs-12 col-md-8 d-none  d-xl-block img-fluid" style={{padding: "0", margin: "0 auto", backgroundColor: "#FFF",  borderRight: "solid 4px #FFF"}}><img src={props.settings?.image.url} className="img-fluid" alt="Bronx Mural" style={{marginTop:"25px"}} />
             </div>
 
             <div className="left-img col-xs-12 col-md-8 d-none d-md-block d-lg-none" style={{ padding: "0", margin: "0 auto", backgroundColor: "#FFF", borderRight: "solid 4px #FFF" }}>
-                <img src="https://fwwebb.com/images/fwwebb/news/2022/News-475x350.jpg" className="img-fluid" alt="Bronx Mural" style={{ marginTop: "25px", width: "100%" }} />
+                <img src={props.settings?.image.url} className="img-fluid" alt="Bronx Mural" style={{ marginTop: "25px", width: "100%" }} />
             </div>
         </div>
     )

@@ -130,7 +130,7 @@ btn:focus, a:focus
   border: 5px
 }
 ul.nav-panel li > ul.nav-panel li {
-  display: block
+  display: block;
 }
 ul.nav-panel li > ul.nav-panel li {
   color: red
@@ -187,7 +187,7 @@ label {
   }
   .main-nav {
     position: absolute;
-    top: 38px;
+    top: 20px;
     left: 0px;
     width: 100%;
     background-color: #FFF;
@@ -307,7 +307,7 @@ label {
   }
   ul.nav-panel li {
     border-bottom: solid 1px #ccc;
-    display: block
+    display: block;
   }
   ul.nav-panel li a {
     text-align: left;
@@ -353,7 +353,7 @@ label {
   .nav-item .main-nav.active {
     width: 100%;
     opacity: 1.0;
-    display: block
+    display: block;
   }
 }
 /*----FOOTER--*/

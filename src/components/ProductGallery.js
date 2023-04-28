@@ -23,7 +23,7 @@ function ProductGallery(props){
         )
     })
     return(
-        <div className="row justify-content-center mt-5">
+        <div className="row justify-content-center mt-5" {...props.preview}>
             <div className="col-auto">
                 <ul className="list-group list-group-horizontal">
                     {products}

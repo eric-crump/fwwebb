@@ -6,6 +6,7 @@ import Stack, {onEntryChange} from "./cstack";
 import NewsPage from "./components/NewsPage";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Page from "./components/Page";
+import Article from "./components/Article";
 
 function App() {
   const [nav, setNav] = useState({});
@@ -25,7 +26,8 @@ function App() {
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<NewsPage />} />
-            <Route path="/:type/:uid" element={<Page />} />
+            <Route path="/pages/:uid" element={<Page />} />
+            <Route path="/article/:uid" element={<Article />} />
           </Routes>
         </BrowserRouter>
       <Footer />

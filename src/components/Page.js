@@ -21,27 +21,33 @@ function Page(){
     let blocks = [];
     entry.modular_blocks?.forEach(item => {
         if(item.hasOwnProperty('paragraph')){
+            let title;
+            if(item.paragraph.title != "")
+                title = <p className="mb-3 text-center display-6" {...item.paragraph?.$?.title}>{item.paragraph.title}</p>
             if(item.paragraph.image !== null){
                 blocks.push(
                     <div className="container mt-3">
-                        <img width="250" src={item.paragraph.image.url} className="mx-auto d-flex float-start pe-2 pt-1" key={item.paragraph.image.uid} {...item.paragraph.image.$.url}></img>
-                        <div dangerouslySetInnerHTML={{__html: item.paragraph.body}} {...item.paragraph.$.body}></div>
+                        {title}
+                        <img width="250" src={item.paragraph.image.url} className="mx-auto d-flex float-start pe-2 pt-1" key={item.paragraph.image?.uid} {...item.paragraph.image?.$?.url}></img>
+                        <div dangerouslySetInnerHTML={{__html: item.paragraph.body}} {...item.paragraph?.$?.body}></div>
                     </div>
                 );
             }
             else{
                 blocks.push(
                     <div className="container mt-3">
-                        <div dangerouslySetInnerHTML={{__html: item.paragraph.body}} {...item.paragraph.$.body}></div>
+                        {title}
+                        <div dangerouslySetInnerHTML={{__html: item.paragraph.body}} {...item.paragraph?.$?.body}></div>
                     </div>
                 )
             }
         }
         else if(item.hasOwnProperty('hero')){
-            blocks.push(<HeroBanner banner={item.hero} key={item.hero._metadata.uid}/>);
+            blocks.push(<HeroBanner banner={item.hero} key={item.hero._metadata?.uid}/>);
         }
         else if(item.hasOwnProperty('product_selector')){
-            blocks.push(<ProductGallery products={item.product_selector.product_selector.products} key={item.product_selector._metadata.uid} />)
+            
+            blocks.push(<ProductGallery products={item.product_selector.product_selector.products} preview={item.product_selector?._metadata?.$?.uid} key={item.product_selector._metadata?.uid} />)
         }
     })
 

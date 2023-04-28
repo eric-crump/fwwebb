@@ -13,11 +13,11 @@ function Hero(props) {
                 </div>
             </div>
 
-            <div className="left-img col-xs-12 col-md-8 d-none  d-xl-block img-fluid" style={{padding: "0", margin: "0 auto", backgroundColor: "#FFF",  borderRight: "solid 4px #FFF"}}><img src={props.settings?.image.url} className="img-fluid" alt="Bronx Mural" style={{marginTop:"25px"}} />
+            <div className="left-img col-xs-12 col-md-8 d-none  d-xl-block img-fluid" style={{padding: "0", margin: "0 auto", backgroundColor: "#FFF",  borderRight: "solid 4px #FFF"}}><img src={props.settings?.image?.url} className="img-fluid" alt="" style={{marginTop:"25px"}} />
             </div>
 
             <div className="left-img col-xs-12 col-md-8 d-none d-md-block d-lg-none" style={{ padding: "0", margin: "0 auto", backgroundColor: "#FFF", borderRight: "solid 4px #FFF" }}>
-                <img src={props.settings?.image.url} className="img-fluid" alt="Bronx Mural" style={{ marginTop: "25px", width: "100%" }} />
+                <img src={props.settings?.image?.url} className="img-fluid" alt="Bronx Mural" style={{ marginTop: "25px", width: "100%" }} />
             </div>
         </div>
     )

@@ -24,7 +24,7 @@ function Header(props) {
                 subItems.push(<li><a href="/sample">{item.nav_item[x].label}</a></li>)
             }
             navItems.push(
-                <li className="nav-item"><span id={item.label} className="d-md-none"><a href="javascript:;">{item.label} <i className="fa fa fa-chevron-right pull-right arow"></i></a></span> <span className="d-md-inline d-none d-sm-none"><a className="nav-link" href="/landing/main-plumbing.php" role="button" aria-expanded="false" >{item.label}</a></span>
+                <li className="nav-item"><span id={item.label} className="d-md-none"><a href="javascript:;">{item.label} <i className="fa fa fa-chevron-right pull-right arow"></i></a></span> <span className="d-md-inline d-none d-sm-none"><a className="nav-link" href="/landing/main-plumbing.php" role="button" aria-expanded="false" {...item.$.label}>{item.label}</a></span>
                     <section className="nav-2 nav-sub">
                         <div className="main-nav">
                             <div className="row">

@@ -1,5 +1,7 @@
 
 function Hero(props) {
+    //console.log('props', props);
+    //console.log('$$$$', props.settings?.image?.$.url);
     return (
         <div className="row">
             <div className="right-img col-xs-12 col-md-4 d-none  d-xl-block">
@@ -17,7 +19,7 @@ function Hero(props) {
             </div>
 
             <div className="left-img col-xs-12 col-md-8 d-none d-md-block d-lg-none" style={{ padding: "0", margin: "0 auto", backgroundColor: "#FFF", borderRight: "solid 4px #FFF" }}>
-                <img src={props.settings?.image?.url} className="img-fluid" alt="Bronx Mural" style={{ marginTop: "25px", width: "100%" }} />
+                <img src={props.settings?.image?.url} className="img-fluid" alt="Bronx Mural" style={{ marginTop: "25px", width: "100%" }} {...props.settings?.image?.$.url}/>
             </div>
         </div>
     )

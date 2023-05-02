@@ -9,7 +9,6 @@ function NewsPage() {
 
     async function getEntry(){
         let theEntry = await Stack.getElementWithRefs('blt4f03ea67696638e6', 'news_page', ['news.reference']);
-        //console.log('entry', theEntry);
         setEntry(theEntry); 
     }
 

@@ -13,7 +13,7 @@ function News(props) {
                                 <time pubdate="pubdate" class="small85p bold mb-1" {...item.$.type}>{item.type + ' - ' + format(parseISO(item.date), 'MMMM dd, yyyy')}</time>
                                 <h2 class="normal a-color"><a href={'/#/' + item._content_type_uid + '/' + item.uid} className="a-other" {...item.$.title}>{item.title}</a></h2>
                             </article>
-                            <div class="col-12"><hr /></div>
+                            <div class="col-12"><hr /></div> 
                         </div>
                     )
                 }

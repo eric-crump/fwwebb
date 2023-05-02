@@ -28,6 +28,7 @@ function App() {
             <Route path="/" element={<NewsPage />} />
             <Route path="/pages/:uid" element={<Page />} />
             <Route path="/article/:uid" element={<Article />} />
+            <Route path="*" element={<NewsPage />} />
           </Routes>
         </BrowserRouter>
       <Footer />

@@ -4,7 +4,7 @@ import Footer from "./components/Footer";
 import {useState, useEffect} from "react";
 import Stack, {onEntryChange} from "./cstack";
 import NewsPage from "./components/NewsPage";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import Page from "./components/Page";
 import Article from "./components/Article";
 
@@ -23,14 +23,13 @@ function App() {
   return (
     <div>
       <Header nav={nav}/>
-        <BrowserRouter>
+        <HashRouter>
           <Routes>
-            <Route path="/" element={<NewsPage />} />
-            <Route path="/pages/:uid" element={<Page />} />
-            <Route path="/article/:uid" element={<Article />} />
-            <Route path="*" element={<NewsPage />} />
+            <Route exact path="/" element={<NewsPage />} />
+            <Route exact path="/pages/:uid" element={<Page />} />
+            <Route exact path="/article/:uid" element={<Article />} />
           </Routes>
-        </BrowserRouter>
+        </HashRouter>
       <Footer />
     </div>
   );

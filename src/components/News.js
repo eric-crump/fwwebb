@@ -11,7 +11,7 @@ function News(props) {
                             <div class="col-sm-2 d-none d-md-block"><a href="/news/2023/vendoExpo_2023.php"> <img src={item.image?.url} alt="Vendor Expo2 023" class="img-thumbnail" {...item.image?.$.url}/></a> </div>
                             <article class="col-sm-10">
                                 <time pubdate="pubdate" class="small85p bold mb-1" {...item.$.type}>{item.type + ' - ' + format(parseISO(item.date), 'MMMM dd, yyyy')}</time>
-                                <h2 class="normal a-color"><a href={item._content_type_uid + '/' + item.uid} className="a-other" {...item.$.title}>{item.title}</a></h2>
+                                <h2 class="normal a-color"><a href={'/#/' + item._content_type_uid + '/' + item.uid} className="a-other" {...item.$.title}>{item.title}</a></h2>
                             </article>
                             <div class="col-12"><hr /></div>
                         </div>

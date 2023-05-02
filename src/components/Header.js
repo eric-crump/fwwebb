@@ -11,7 +11,7 @@ function Header(props) {
             for (let x = 0; x < item.nav_item.length; x++) {
                 if ((x % 8 == 0 || x == item.nav_item.length - 1) && x != 0) {
                     if (x == item.nav_item.length - 1)
-                        subItems.push(<li><a href={'/pages/' + item.nav_item[x].page[0].uid}>{item.nav_item[x].label}</a></li>);
+                        subItems.push(<li><a href={'/#/pages/' + item.nav_item[x].page[0].uid}>{item.nav_item[x].label}</a></li>);
                     sections.push(
                         <div className="col-lg-3 col-md-6">
                             <ul className="nav-subcat">
